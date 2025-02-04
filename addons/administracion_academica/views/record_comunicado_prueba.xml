@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
-    <!-- Menú principal para Comunicados -->
-    <menuitem id="menu_owl_greet" name="Comunicaciones" sequence="10"/>
-
-    <!-- Menú para acceder a los comunicados, bajo el menú principal -->
-    <menuitem id="menu_comunicado_prueba"
-              name="Comunicados"
-              parent="menu_owl_greet"
-              action="administracion_academica.comunicado_prueba_action_window"
-              sequence="80"/>
-
     <!-- Vista en lista (tree) para los comunicados -->
-    <record id="comunicado_list" model="ir.ui.view">
+    <record id="administracion_academica.comunicado_list" model="ir.ui.view">
       <field name="name">comunicado_prueba.tree</field>
       <field name="model">administracion_academica.comunicado_prueba</field>
       <field name="arch" type="xml">
@@ -67,8 +57,14 @@
       <field name="name">Comunicados</field>
       <field name="res_model">administracion_academica.comunicado_prueba</field>
       <field name="view_mode">tree,form</field>
-      <field name="view_id" ref="comunicado_list"/>
+      <field name="view_id" ref="administracion_academica.comunicado_list"/>
     </record>
 
+    <!-- Menú para acceder a los comunicados -->
+    <menuitem id="menu_comunicado_prueba"
+              name="Comunicados"
+              parent="menu_owl_greet"
+              action="administracion_academica.comunicado_prueba_action_window"
+              sequence="80"/>
   </data>
 </odoo>
