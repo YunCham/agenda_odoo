@@ -60,10 +60,9 @@
       <field name="view_id" ref="administracion_academica.comunicado_list"/>
     </record>
 
-    <!-- Menú para acceder a los comunicados -->
+    <!-- Menú independiente para acceder a los comunicados -->
     <menuitem id="menu_comunicado_prueba"
               name="Comunicados"
-              parent="menu_owl_greet"
               action="administracion_academica.comunicado_prueba_action_window"
               sequence="80"/>
   </data>
